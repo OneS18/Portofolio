@@ -69,6 +69,7 @@ const Switch = styled.div`
       display: block;
   }
     li {
+      cursor: pointer;
       margin: 25px;
       list-style-type: none;
       color: black;
