@@ -4,7 +4,7 @@ import me from "../images/me-icons.png";
 
 const Header = () => {
   return (
-    <div>
+    <Headers>
       <Switch>
         <ul>
           <li>
@@ -21,9 +21,13 @@ const Header = () => {
       <Image>
         <img src={me} alt="" />
       </Image>
-    </div>
+    </Headers>
   );
 };
+
+const Headers = styled.div`
+  height: 100vh;
+`;
 
 const Image = styled.div`
   img {

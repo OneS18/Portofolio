@@ -11,9 +11,9 @@ const AboutMe = () => {
         </Title>
       </About>
       <Container>
-        <Box>
-          <Me>
-            <h2>Hello</h2>
+        <div className="section me">
+          <div className="text">
+            <h1>Hello</h1>
             <p>
               I'm Sergiu, a front-end developer who is hungry to learn new
               technologies, who likes the idea of development yourself, who
@@ -22,9 +22,11 @@ const AboutMe = () => {
               and books. My goal for 2022 is to become a full stack web
               developer
             </p>
-          </Me>
-          <Skills>
-            <h2>Skills</h2>
+          </div>
+        </div>
+        <div className="section about">
+          <div className="text">
+            <h1>Skills</h1>
             <p>HTML</p>
             <p>CSS</p>
             <p>Styled Components</p>
@@ -34,8 +36,8 @@ const AboutMe = () => {
             <p>React Hooks</p>
             <p>Firebase</p>
             <p>Git</p>
-          </Skills>
-        </Box>
+          </div>
+        </div>
       </Container>
     </>
   );
@@ -45,6 +47,7 @@ const About = styled.div`
   width: 100%;
   height: 100%;
   margin-top: 70px;
+  margin-bottom: 50px;
 `;
 const Title = styled.div`
   text-align: center;
@@ -60,92 +63,69 @@ const Title = styled.div`
 `;
 
 const Container = styled.div`
-  margin-top: 10px;
-`;
-const Box = styled.div`
   display: flex;
   justify-content: space-around;
-  text-align: center;
-  /* width: 100%; */
+  align-items: center;
   height: 70vh;
 
-  @media (max-width: 940px) {
+  @media (max-width: 768px) {
     flex-direction: column;
-  }
-`;
-const Me = styled.div`
-  background-color: yellow;
-  width: 49vh;
-  border-radius: 20px;
-  background: black;
-  box-shadow: 40px 20px 3px yellow;
-  transition: transform 450ms;
-  height: 80vh;
-  &:hover {
-    transform: rotate(-5deg);
-  }
-  h2 {
-    color: white;
-    font-size: 3rem;
-    font-family: "Playfair Display", serif;
-    font-family: "Roboto Slab", serif;
-    font-family: "Ubuntu", sans-serif;
-    padding-bottom: 20px;
-  }
-  p {
-    color: white;
-    font-size: 30px;
-    font-family: "Playfair Display", serif;
-    font-family: "Roboto Slab", serif;
-    font-family: "Ubuntu", sans-serif;
-    padding-bottom: 20px;
-    line-height: 35px;
-    font-weight: 100;
-    padding: 30px;
   }
 
-  @media (max-width: 940px) {
+  .section {
+    margin: 10px;
+    width: 40%;
+    height: 40vh;
+    background: red;
+    display: flex;
+    justify-content: center;
     flex-direction: column;
-    margin-left: 15px;
-    height: 80vh;
-    box-shadow: none;
-    margin-top: 500px;
-  }
-`;
-const Skills = styled.div`
-  background-color: yellow;
-  width: 49vh;
-  border-radius: 20px;
-  background: black;
-  box-shadow: 40px 20px 3px yellow;
-  transition: transform 450ms;
-  &:hover {
-    transform: rotate(5deg);
-  }
-  h2 {
+    background: black;
+    border-radius: 10px;
+    box-shadow: 10px 5px 20px black;
+    transition: ease-out 500ms;
     color: white;
-    font-size: 3rem;
-    font-family: "Playfair Display", serif;
-    font-family: "Roboto Slab", serif;
-    font-family: "Ubuntu", sans-serif;
-  }
-  p {
-    color: white;
-    font-size: 30px;
-    font-family: "Playfair Display", serif;
-    font-family: "Roboto Slab", serif;
-    font-family: "Ubuntu", sans-serif;
-    padding-bottom: 20px;
-    line-height: 35px;
-    font-weight: 100;
-    /* padding: 30px; */
-  }
 
-  @media (max-width: 940px) {
-    flex-direction: column;
-    margin: 20px;
-    height: 60vh;
-    box-shadow: none;
+    &:hover {
+      background: white;
+      color: black;
+      box-shadow: 10px 5px 20px white;
+    }
+
+    @media (max-width: 768px) {
+      width: 90%;
+    }
+
+    .text {
+      justify-content: center;
+      text-align: center;
+      padding: 10px;
+      font-weight: 700;
+      line-height: 2rem;
+      font-family: "Playfair Display", serif;
+      font-family: "Roboto Slab", serif;
+      font-family: "Ubuntu", sans-serif;
+      font-size: 1rem;
+      /* color: white; */
+      transition: ease-out 500ms;
+
+      &:hover {
+        color: black;
+      }
+
+      @media (min-width: 768px) {
+        line-height: 1.4rem;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      p {
+        font-size: 1.3rem;
+      }
+    }
   }
 `;
 
