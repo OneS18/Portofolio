@@ -1,20 +1,23 @@
 import React from "react";
 import styled from "styled-components";
 import me from "../images/me-icons.png";
+import { Link } from "react-router-dom";
+// import AboutMe from "./AboutMe";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <Headers>
       <Switch>
         <ul>
           <li>
-            <a>About Me</a>
+            <a href="#about">About Me</a>
+          </li>
+
+          <li>
+            <a href="#projects">Projects</a>
           </li>
           <li>
-            <a>Projects</a>
-          </li>
-          <li>
-            <a>Let's talk</a>
+            <a href="#chat">Let's talk</a>
           </li>
         </ul>
       </Switch>
@@ -88,6 +91,9 @@ const Switch = styled.div`
         }
       a {
         font-family: "Roboto Slab", serif;
+        text-decoration: none;
+        color:black;
+        font-weight: 900;
       }
     }
 `;

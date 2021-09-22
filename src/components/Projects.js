@@ -2,14 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import netflix from "../images/NETFLIX.png";
 import linkedin from "../images/linkedin-porto.png";
-import projects from "../images/projects.svg";
+import projects from "../images/projects-anime.svg";
 import github from "../images/github-logo.svg";
-import { Link } from "react-router-dom";
 
 const Projects = () => {
   return (
     <div>
-      <Title>
+      <Title id="projects">
         <img className="title" src={projects} alt="" />
       </Title>
       <Project>
@@ -58,8 +57,6 @@ const Title = styled.div`
 `;
 
 const Project = styled.div`
-  height: 100vh;
-
   h1 {
     display: flex;
     justify-content: center;

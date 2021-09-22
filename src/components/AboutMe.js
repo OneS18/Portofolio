@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import about from "../images/Untitled.svg";
+import about from "../images/about.svg";
 
 const AboutMe = () => {
   return (
     <>
-      <About>
+      <About id="about">
         <Title>
           <img src={about} alt="" />
         </Title>
