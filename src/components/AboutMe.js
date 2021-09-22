@@ -29,6 +29,7 @@ const AboutMe = () => {
             <h1>Skills</h1>
             <p>HTML</p>
             <p>CSS</p>
+            <p>SCSS</p>
             <p>Styled Components</p>
             <p>JavaScript</p>
             <p>React.js</p>
@@ -53,6 +54,7 @@ const Title = styled.div`
   text-align: center;
   display: flex;
   justify-content: center;
+  padding: 50px;
   img {
     margin-left: 60px;
     transition: transform 450ms;
@@ -75,7 +77,7 @@ const Container = styled.div`
   .section {
     margin: 10px;
     width: 40%;
-    height: 40vh;
+    height: 50vh;
     background: red;
     display: flex;
     justify-content: center;
@@ -85,6 +87,7 @@ const Container = styled.div`
     box-shadow: 10px 5px 20px black;
     transition: ease-out 500ms;
     color: white;
+    padding: 20px;
 
     &:hover {
       background: white;
@@ -93,7 +96,7 @@ const Container = styled.div`
     }
 
     @media (max-width: 768px) {
-      width: 90%;
+      width: 100%;
     }
 
     .text {
@@ -113,8 +116,8 @@ const Container = styled.div`
         color: black;
       }
 
-      @media (min-width: 768px) {
-        line-height: 1.4rem;
+      @media (max-width: 768px) {
+        line-height: 1.3rem;
       }
 
       h1 {
