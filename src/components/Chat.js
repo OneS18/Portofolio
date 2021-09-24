@@ -71,9 +71,18 @@ const Chat = () => {
 };
 
 const Title = styled.div`
+  width: 100%;
   display: flex;
   justify-content: center;
-  /* margin-right: 50%; */
+  transition: transform 450ms;
+
+  &:hover {
+    transform: scale(1.08);
+  }
+
+  img {
+    width: 50vh;
+  }
 `;
 
 const Container = styled.div`

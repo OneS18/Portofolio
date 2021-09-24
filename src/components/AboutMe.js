@@ -55,6 +55,10 @@ const Title = styled.div`
   display: flex;
   justify-content: center;
   padding: 50px;
+
+  @media (max-width: 768px) {
+    width: 85%;
+  }
   img {
     margin-left: 60px;
     transition: transform 450ms;
@@ -96,7 +100,7 @@ const Container = styled.div`
     }
 
     @media (max-width: 768px) {
-      width: 100%;
+      width: 95%;
     }
 
     .text {
