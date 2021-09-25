@@ -36,6 +36,7 @@ const AboutMe = () => {
             <p>Redux.js</p>
             <p>React Hooks</p>
             <p>Firebase</p>
+            <p>NPM</p>
             <p>Git</p>
           </div>
         </div>
@@ -48,16 +49,19 @@ const About = styled.div`
   width: 100%;
   height: 100%;
   margin-top: 70px;
-  margin-bottom: 50px;
+  margin-bottom: 70px;
+  padding: 0;
 `;
 const Title = styled.div`
   text-align: center;
   display: flex;
   justify-content: center;
   padding: 50px;
+  box-sizing: content-box;
+  padding: 0;
 
   @media (max-width: 768px) {
-    width: 85%;
+    /* width: 85%; */
   }
   img {
     margin-left: 60px;
@@ -81,7 +85,6 @@ const Container = styled.div`
   .section {
     margin: 10px;
     width: 40%;
-    height: 50vh;
     background: red;
     display: flex;
     justify-content: center;
@@ -108,7 +111,7 @@ const Container = styled.div`
       text-align: center;
       padding: 10px;
       font-weight: 700;
-      line-height: 2rem;
+      line-height: 2.5rem;
       font-family: "Playfair Display", serif;
       font-family: "Roboto Slab", serif;
       font-family: "Ubuntu", sans-serif;
